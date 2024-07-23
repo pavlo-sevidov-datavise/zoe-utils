@@ -33,4 +33,4 @@ Contributions are welcome! Please open an issue or submit a pull request with yo
 
 ## Contact
 
-For any questions or suggestions, please open an issue on the GitHub repository._
+For any questions or suggestions, please open an issue on the GitHub repository.
