@@ -1,4 +1,9 @@
+from pathlib import Path
+
 from setuptools import setup, find_packages
+
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text()
 
 setup(
     name='zoe-utils',
@@ -6,7 +11,8 @@ setup(
     author='Pavlo Sevidov',
     author_email='pavlo.sevidov@datavise.ai',
     description='A Zeo utility library for working with Prefect',
-    long_description=open('README.md').read(),
+    license='MIT',
+    long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/pavlo-sevidov-datavise/zoe-utils',
     packages=find_packages(),
