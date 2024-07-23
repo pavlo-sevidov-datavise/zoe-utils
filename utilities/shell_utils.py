@@ -12,11 +12,14 @@ class ShellTask:
                               shell=True,
                               text=True,
                               bufsize=1,
-                              universal_newlines=True) as proc:
-            for line in proc.stdout:
-                print(line.strip())  # Log each line of output
-            _, errors = proc.communicate()
+                              universal_newlines=True) as process:
 
-            if proc.returncode != 0:
+            for line in process.stdout:
+                print(line.strip())  # Log each line of output
+            _, errors = process.communicate()
+
+            if process.returncode != 0:
                 print(f"Error executing command: '{self.command}', error: {errors}")
-                raise subprocess.CalledProcessError(proc.returncode, self.command, output=errors)
+                raise subprocess.CalledProcessError(process.returncode, self.command, output=errors)
+            else:
+                return process.returncode
