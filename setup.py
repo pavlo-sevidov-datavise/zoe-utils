@@ -7,7 +7,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
     name='zoe-utils',
-    version='0.1.0',
+    version='0.1.2',
     author='Pavlo Sevidov',
     author_email='pavlo.sevidov@datavise.ai',
     description='A Zeo utility library for working with Prefect',
